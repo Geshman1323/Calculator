@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,900&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0 0;
+  padding: 0 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+*::selection {
+background: rgba(37, 249, 245, 1);
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  background-image: radial-gradient(
+    circle farthest-corner at 7.2% 13.6%,
+    rgba(37, 249, 245, 1) 0%,
+    rgba(8, 70, 218, 1) 90%
+  );
+  display: grid;
+  place-items: center;
+}
+
+.box {
+  width: 20rem;
+  display: grid;
+  grid-template-rows: minmax(6rem, auto) repeat(5, 5rem);
+  grid-template-columns: repeat(4, 5rem);
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.display {
+  grid-column: -1 /1;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 1rem;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.8);
+  border: none;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+button:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.two {
+  grid-column: span 2;
+}
+
+button {
+  border: 1px solid rgba(128, 128, 128, 0.6);
+  background: rgba(255, 255, 255, 0.6);
+  font-size: 1em;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
